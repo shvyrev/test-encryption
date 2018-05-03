@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 #Генерация приватного ключа:
-openssl genrsa -out private_key.pem 2048
+openssl genrsa -out private_key.pem 4096
 #Конвертация приватного ключа в der:
 openssl pkcs8 -topk8 -inform PEM -outform DER -in private_key.pem -out private_key.der -nocrypt
 #Генерация публичного ключа:
